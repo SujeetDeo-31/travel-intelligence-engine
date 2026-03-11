@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const { destination, dates, travelerType } = await req.json();
     
     // 1. API KEY
-    const apiKey = process.env.API_KEY! 
+   const apiKey: string = process.env.API_KEY as string;
 
     // 2. DETECTIVE WORK: List all available models
     // We fetch the list of models your key has access to via REST API
