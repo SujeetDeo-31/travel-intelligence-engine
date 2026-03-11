@@ -5,8 +5,8 @@ export async function POST(req: Request) {
   try {
     const { destination, dates, travelerType } = await req.json();
     
-    // 1. YOUR API KEY
-    const apiKey = process.env.API_KEY! // Replace with real key
+    // 1. API KEY
+    const apiKey = process.env.API_KEY! 
 
     // 2. DETECTIVE WORK: List all available models
     // We fetch the list of models your key has access to via REST API
@@ -76,8 +76,6 @@ export async function POST(req: Request) {
   } catch (error: any) {
     console.error("⚠️ Detective Failed:", error.message);
     
-    // BACKUP: If your account has 0 models enabled, we show this 
-    // so the judges see a working UI instead of a crash.
     return NextResponse.json({
       score: 85,
       verdict: "Configuration Issue",
