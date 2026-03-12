@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Travel AI - Predictive Intelligence Engine",
+  title: "Travel AI | Predictive Intelligence Engine",
   description: "AI-powered travel intelligence and destination scoring.",
 };
 
